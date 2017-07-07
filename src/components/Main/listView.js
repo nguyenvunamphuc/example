@@ -7,6 +7,7 @@ import {
   View, Text,
   Dimensions,
   StyleSheet,
+  TextInput,
   ListView,
   ActivityIndicator,
   RefreshControl,
@@ -156,7 +157,7 @@ class ListNews extends Component {
                 }}
               >
                 <View style={{flex:1}} >
-                  <View style={{height: 40,borderBottomColor: "#000000", borderBottomWidth:1}}>
+                  <View style={{flex:1,height: 40,borderBottomColor: "#000000", borderBottomWidth:1,justifyContent:'center'}}>
                     <Text style={{alignSelf: "center", fontWeight: '500'}}>Comments</Text>
                     <TouchableOpacity  style={{position:'absolute', left:5}} onPress={() => {
                       this.setCommentModalVisible(!this.state.commentModal)
@@ -166,8 +167,11 @@ class ListNews extends Component {
 
                   </View>
 
-                    <View style={{backgroundColor:"#733CFF", position:'absolute',bottom:0, marginBottom:0,height: 40}}>
-
+                  <View style={{flex: 10}}>
+                  </View>
+                  <View style={{flex: 1,borderTopWidth:1, borderColor:"#000000", flexDirection:'row', justifyContent:'center'}}>
+                   <TextInput style={{flex:10}} underlineColorAndroid="transparent"/>
+                    <Icon name="send-o" size={30} style={{flex:1, alignSelf:'center'}}/>
                   </View>
                 </View>
               </Modal>
